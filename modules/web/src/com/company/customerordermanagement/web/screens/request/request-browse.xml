@@ -7,7 +7,9 @@
     <data readOnly="true">
         <collection id="requestsDc"
                     class="com.company.customerordermanagement.entity.Request">
-            <view extends="_local"/>
+            <view extends="_local">
+                <property name="customer" view="_minimal"/>
+            </view>
             <loader id="requestsDl">
                 <query>
                     <![CDATA[select e from customerordermanagement_Request e]]>

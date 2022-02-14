@@ -21,4 +21,8 @@
         <property name="file" view="_minimal"/>
         <property name="order" view="_minimal"/>
     </view>
+    <view entity="customerordermanagement_Request" name="request-view" extends="_local">
+        <property name="customer" view="_minimal"/>
+        <property name="requestLine" view="_local"/>
+    </view>
 </views>
