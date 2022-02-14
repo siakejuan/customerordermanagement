@@ -8,6 +8,7 @@
                   class="com.company.customerordermanagement.entity.Request">
             <view extends="_local">
                 <property name="requestLine" view="_local"/>
+                <property name="customer" view="_minimal"/>
             </view>
             <loader/>
             <collection id="requestLineDc" property="requestLine"/>

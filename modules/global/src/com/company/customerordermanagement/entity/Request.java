@@ -12,9 +12,10 @@ import java.util.List;
 public class Request extends StandardEntity {
     private static final long serialVersionUID = -2734069336312992496L;
 
+    @JoinColumn(name = "CUSTOMER_ID")
+    @ManyToOne(fetch = FetchType.LAZY)
     @NotNull
-    @Column(name = "CUSTOMER")
-    private String customer;
+    private Customer customer;
 
     @Column(name = "DATE_")
     @Temporal(TemporalType.TIMESTAMP)
@@ -31,6 +32,14 @@ public class Request extends StandardEntity {
 
     @OneToMany(mappedBy = "request")
     private List<RequestLine> requestLine;
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
 
     public List<RequestLine> getRequestLine() {
         return requestLine;
@@ -72,11 +81,4 @@ public class Request extends StandardEntity {
         this.location = location;
     }
 
-    public String getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(String customer) {
-        this.customer = customer;
-    }
 }
