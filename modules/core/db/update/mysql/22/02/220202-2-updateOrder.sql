@@ -1,0 +1,2 @@
+alter table CUSTOMERORDERMANAGEMENT_ORDER change column ORDER_ID ORDER_ID__U46107 varchar(255)^
+alter table CUSTOMERORDERMANAGEMENT_ORDER add column ORDER_ID bigint ;

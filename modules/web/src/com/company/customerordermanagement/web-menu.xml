@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-customerordermanagement" insertBefore="administration" caption="mainMsg://menu_config.application-customerordermanagement">
+        <item screen="customerordermanagement_Customer.browse"
+              caption="mainMsg://menu_config.customerordermanagement_Customer.browse"/>
+        <item screen="customerordermanagement_Product.browse"
+              caption="mainMsg://menu_config.customerordermanagement_Product.browse"/>
+        <item screen="customerordermanagement_Order.browse"
+              caption="mainMsg://menu_config.customerordermanagement_Order.browse"/>
+    </menu>
+    <menu id="CFS" caption="CFS">
+        <item screen="customerordermanagement_Request.browse"
+              caption="mainMsg://menu_config.customerordermanagement_Request.browse"/>
+    </menu>
+    <menu id="testWindow" insertAfter="help" caption="Address">
+        <item caption="New Address" screen="customerordermanagement_Address.edit"/>
+    </menu>
+</menu-config>

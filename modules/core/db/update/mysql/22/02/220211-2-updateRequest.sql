@@ -1,0 +1,3 @@
+alter table CUSTOMERORDERMANAGEMENT_REQUEST change column TIME_ TIME___U22259 time^
+alter table CUSTOMERORDERMANAGEMENT_REQUEST change column DATE_ DATE___U26354 date^
+alter table CUSTOMERORDERMANAGEMENT_REQUEST add column DATE_ datetime(3) ;

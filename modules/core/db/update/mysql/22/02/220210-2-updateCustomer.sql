@@ -1,0 +1,1 @@
+alter table CUSTOMERORDERMANAGEMENT_CUSTOMER add column MARITAL_STATUS varchar(50) ;

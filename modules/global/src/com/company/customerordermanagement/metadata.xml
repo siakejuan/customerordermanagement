@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<metadata xmlns="http://schemas.haulmont.com/cuba/metadata.xsd">
+
+    <datatypes>
+        <datatype id="year" class="com.company.customerordermanagement.entity.YearDataType"/>
+    </datatypes>
+
+    <metadata-model root-package="com.company.customerordermanagement" namespace="customerordermanagement">
+        <class>com.company.customerordermanagement.entity.YearDataType</class>
+    </metadata-model>
+
+
+</metadata>

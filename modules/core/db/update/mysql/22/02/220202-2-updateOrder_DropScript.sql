@@ -1,0 +1,1 @@
+alter table CUSTOMERORDERMANAGEMENT_ORDER drop column ORDER_ID__U46107 cascade ;

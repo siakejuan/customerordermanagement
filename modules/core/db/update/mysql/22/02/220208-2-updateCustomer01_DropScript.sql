@@ -1,0 +1,1 @@
+alter table CUSTOMERORDERMANAGEMENT_CUSTOMER drop column BIRTH_YEAR__U22580 cascade ;

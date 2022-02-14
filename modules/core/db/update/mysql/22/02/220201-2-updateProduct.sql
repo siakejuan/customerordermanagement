@@ -1,0 +1,2 @@
+alter table CUSTOMERORDERMANAGEMENT_PRODUCT change column PRICE PRICE__U98790 int^
+alter table CUSTOMERORDERMANAGEMENT_PRODUCT add column CODE integer ;

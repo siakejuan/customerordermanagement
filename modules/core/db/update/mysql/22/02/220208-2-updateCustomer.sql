@@ -1,0 +1,1 @@
+alter table CUSTOMERORDERMANAGEMENT_CUSTOMER add column BIRTH_YEAR integer ;

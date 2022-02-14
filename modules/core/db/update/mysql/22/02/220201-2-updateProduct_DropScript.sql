@@ -1,0 +1,1 @@
+alter table CUSTOMERORDERMANAGEMENT_PRODUCT drop column PRICE__U98790 cascade ;

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://requestEdit.caption"
+        focusComponent="form"
+        messagesPack="com.company.customerordermanagement.web.screens.request">
+    <data>
+        <instance id="requestDc"
+                  class="com.company.customerordermanagement.entity.Request">
+            <view extends="_local">
+                <property name="requestLine" view="_local"/>
+            </view>
+            <loader/>
+            <collection id="requestLineDc" property="requestLine"/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <label value="Plug On/Off Food Container Service Ticket"/>
+        <form id="form" dataContainer="requestDc" width="1000px">
+            <column>
+                <textField id="customerField" property="customer"/>
+                <dateField id="dateTimeField" property="date"/>
+                <textField id="locationField" property="location"/>
+            </column>
+            <column>
+                <textField id="ticketNumberField" property="ticketNumber"/>
+                <lookupField id="statusField" property="status"/>
+            </column>
+        </form>
+        <groupBox id="requestLineBox" caption="msg://com.company.customerordermanagement.entity/Request.requestLine">
+            <table id="requestLineTable" dataContainer="requestLineDc" width="100%" height="200px">
+                <actions>
+                    <action id="create" type="create"/>
+                    <action id="edit" type="edit"/>
+                    <action id="remove" type="remove"/>
+                </actions>
+                <columns>
+                    <column id="containerNumber"/>
+                    <column id="plugOn"/>
+                    <column id="plugOff"/>
+                    <column id="temperatureReading"/>
+                    <column id="remarks"/>
+                </columns>
+                <buttonsPanel>
+                    <button action="requestLineTable.create"/>
+                    <button action="requestLineTable.edit"/>
+                    <button action="requestLineTable.remove"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose" caption="Save"/>
+            <button id="submitBtn" caption="Submit"/>
+            <button id="printBtn" caption="Print" icon="font-icon:PRINT"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

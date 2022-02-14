@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://requestLineEdit.caption"
+        focusComponent="form"
+        messagesPack="com.company.customerordermanagement.web.screens.requestline">
+    <data>
+        <instance id="requestLineDc"
+                  class="com.company.customerordermanagement.entity.RequestLine">
+            <view>
+                <property name="container" view="_minimal">
+                    <property name="containerNumber"/>
+                    <property name="containerType"/>
+                </property>
+                <property name="plugOn"/>
+                <property name="plugOff"/>
+                <property name="remarks"/>
+                <property name="temperatureReading"/>
+            </view>
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="requestLineDc">
+            <column width="350px">
+                <pickerField id="containerField" property="container">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                        <action id="clear" type="picker_clear"/>
+                    </actions>
+                </pickerField>
+                <checkBox id="plugOnField" property="plugOn"/>
+                <optionsGroup id="containerType" property="container.containerType" visible="false"/>
+                <checkBox id="plugOffField" property="plugOff"/>
+                <textField id="remarksField" property="remarks"/>
+                <textField id="temperatureReadingField" property="temperatureReading"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>
